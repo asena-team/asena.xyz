@@ -3,7 +3,7 @@ Promotional website of the Asena discord bot.
 
 ## Preview
 <div style="text-align: center">
-    <img src="https://cdn.discordapp.com/attachments/800449652159676417/806186754482110485/unknown.png">
+    <img src="https://user-images.githubusercontent.com/20264712/110385548-1ca1f280-8070-11eb-830f-644c878ebf02.png">
 </div>
 
 ## LICENSE
