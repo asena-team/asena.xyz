@@ -12,12 +12,6 @@
 
 @font-face {
     font-family: "Whitney";
-    src: url("../fonts/Whitney-Bold.woff");
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: "Whitney";
     src: url("../fonts/Whitney-Black.woff");
     font-weight: 700;
 }
