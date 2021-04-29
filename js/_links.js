@@ -1,0 +1,3 @@
+var links = {
+    invite: ""
+};

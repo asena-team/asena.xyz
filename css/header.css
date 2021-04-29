@@ -1,0 +1,171 @@
+.header {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background: var(--body-bg);
+    transition: 0.245s ease-out;
+    transition-property: box-shadow, background;
+}
+
+.header .header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--document-max-width);
+}
+
+.header .hidden {
+    display: none;
+}
+
+.header .hamburger {
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header .hamburger span {
+    height: 2px;
+    width: 24px;
+    background: #ffffff;
+}
+
+.header .link_items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .icon img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.header .links ul li {
+    float: left;
+    margin-right: 15px;
+}
+
+.header .links ul li:last-child {
+    margin-right: 0;
+}
+
+.header .links ul li a {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 4.3;
+    color: #ffffff;
+    position: relative;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .links ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: #ffffff;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+    transition-property: width, background;
+}
+
+.header .links ul li a:hover {
+    color: var(--theme-color);
+}
+
+.header .links ul li a:hover::after {
+    width: 100%;
+    background: var(--theme-color);
+}
+
+.header .lang_select {
+    position: relative;
+    user-select: none;
+}
+
+.header .lang_select .selected_language:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.header .lang_select .selected_language {
+    padding: 7px 12px;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+    transition: background 0.15s ease-out;
+}
+
+.header .lang_select .selected_language::after {
+    content: "";
+    border: 6px solid transparent;
+    border-top: 7px solid #fff;
+    position: absolute;
+    top: 60%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.header .lang_select .dropdown_languages {
+    position: absolute;
+    cursor: default;
+    color: #ffffff;
+    background: #2a2c32;
+    padding: 7px;
+    border: 1px solid #22252d;
+    border-radius: 4px;
+    top: -7px;
+    overflow: hidden;
+    transition: 0.1s ease-out 0.1s;
+    transition-property: transform, opacity;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 7;
+    transform: scale(0) translateY(50%);
+}
+
+.header .lang_select:hover .dropdown_languages, .header .lang_select .dropdown_languages:hover {
+    animation: popout 0.22s ease-out;
+    transform: scale(1) translateY(50%);
+    opacity: 1;
+}
+
+.header .lang_select .dropdown_languages ul li {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    transition: background 0.15s ease-out;
+    border-radius: 4px;
+}
+
+.header .lang_select .dropdown_languages ul li:last-child {
+    margin-bottom: 0;
+}
+
+.header .lang_select .dropdown_languages ul li.selected {
+    background: rgba(255, 255, 255, 0.08);
+    cursor: default;
+}
+
+.header .lang_select .dropdown_languages ul li:hover {
+    background: rgba(255, 255, 255, 0.08);
+}

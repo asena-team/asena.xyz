@@ -1,0 +1,205 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    min-height: calc(100vh - 90px);
+    padding-top: 0 !important;
+}
+
+.hero h1 {
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.hero .interactive_raffle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #36393F;
+    padding: 30px 70px;
+    border-radius: 4px;
+    max-width: 520px !important;
+    overflow: auto;
+}
+
+.hero .interactive_raffle:hover {
+    background: #32353b;
+}
+
+.hero .interactive_raffle * {
+    font-family: 'Whitney', -apple-system, 'Inter', 'Poppins', sans-serif, monospace;
+}
+
+.hero .interactive_raffle .hidden {
+    display: none !important;
+}
+
+.hero .interactive_raffle .interactive_raffle_icon {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.hero .interactive_raffle .interactive_raffle_icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.hero .interactive_raffle .interactive_raffle_message img {
+    max-width: 22px;
+    max-height: 22px;
+    padding-top: 3px;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_author {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_author span.verified_bot {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: flex;
+    padding: 2px 4px;
+    background: #7187D7;
+    border-radius: 3px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+    left: 50px;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_author span.verified_bot::before {
+    content: "Asena";
+    color: #ffffff;
+    font-family: 'Whitney', -apple-system, 'Inter', 'Poppins', sans-serif, monospace;
+    font-weight: 500;
+    font-size: 16px;
+    position: absolute;
+    text-transform: none;
+    left: -50px;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_author span.verified_bot img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+    margin-left: -2px;
+    margin-top: -3px;
+    position: relative;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_author span.verified_bot img::selection {
+    background: #37bfca;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_content {
+    padding-top: 5px;
+    font-family: 'Whitney', -apple-system, 'Inter', 'Poppins', sans-serif, monospace;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_content img {
+    display: inline;
+    padding-top: 5px;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_content > b.bold {
+    font-weight: 700;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_embed {
+    margin-top: 10px;
+    border-radius: 4px;
+    background: #2F3136;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 400;
+    border-left: 4px solid #BD087D;
+    position: relative;
+    line-height: 1.5;
+    min-width: 255px;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_embed b {
+    font-weight: 700;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_embed img {
+    width: 18px;
+    height: 18px;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_embed .embed_title {
+    font-weight: 700;
+}
+
+.hero .interactive_raffle .interactive_raffle_message span.tag {
+    display: inline-block;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114,137,218,.1);
+    border-radius: 3px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.hero .interactive_raffle .interactive_raffle_message span.tag:hover {
+    background: #7289da;
+    color: #ffffff;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_reactions {
+    position: relative;
+    max-width: max-content;
+    padding: 0 8px;
+    background: #3e4147;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 4px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_reactions span {
+    color: #72767d;
+    position: relative;
+    transition: top 0.14s ease-in-out;
+    top: 0;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_reactions span::after {
+    content: "2";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    transition: top 0.14s ease-in-out;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_reactions:hover span {
+    color: #dcddde;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_reactions img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    margin-bottom: 3px;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_reactions.selected {
+    background: #474f6c;
+}
+
+.hero .interactive_raffle .interactive_raffle_message .message_reactions.selected span {
+    color: #7289da;
+    top: -25px;
+}
