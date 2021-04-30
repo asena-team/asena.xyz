@@ -30,6 +30,7 @@
     padding: 70px 0;
     height: 100%;
     min-width: var(--document-max-width);
+    max-width: var(--document-max-width);
 }
 
 .slider_part .swiper-slide h2 {

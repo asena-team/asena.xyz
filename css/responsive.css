@@ -88,6 +88,10 @@
         text-align: center !important;
     }
 
+    .slider_part .swiper-slide .swiper-slide-wrapper .slide-text a.button:last-child {
+        margin-left: 0;
+    }
+
     .slider_part .swiper-slide .swiper-slide-wrapper .slide-image {
         padding-left: 0 !important;
         width: 100%;
