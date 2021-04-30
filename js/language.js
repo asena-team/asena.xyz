@@ -4,36 +4,32 @@ const elements = document.querySelectorAll('*')
 const dropdownLanguages = document.querySelectorAll('.lang_select .dropdown_languages ul')[0]
 const selectedLanguage = document.querySelectorAll('.lang_select .selected_language .language_name')[0]
 const sliderImages = document.querySelectorAll('.swiper-container .swiper-wrapper img.slide_image')
-const sliderTexts = document.querySelectorAll('.swiper-container .swiper-wrapper .slide-text *')
 
-let language = navigator.language || navigator.userLanguage || navigator.languages[0]
-let userLanguage
-switch(language){
+let navigatorLanguage = navigator.language || navigator.userLanguage || navigator.languages[0]
+let language
+switch(navigatorLanguage){
     case 'az':
     case 'az-AZ':
     case 'tr_TR':
     case 'tr-TR':
     case 'tur':
     case 'tr':
-        userLanguage = 'tr_TR'
+        language = 'tr_TR'
         break
 
     default:
-        userLanguage = DEFAULT_LANGUAGE
+        language = DEFAULT_LANGUAGE
+        break
 }
 
 if(localStorage.getItem('language')){
-    language = localStorage.getItem('language')
-    if(!languages[language]){
+    if(!languages[localStorage.getItem('language')]){
         localStorage.setItem('language', DEFAULT_LANGUAGE)
     }
 
     translate()
 }else{
-    localStorage.setItem('language', languages[userLanguage] ? userLanguage : DEFAULT_LANGUAGE)
-    language = localStorage.getItem('language')
-
-    translate()
+    setLanguage(language)
 }
 
 function translate(){
@@ -49,7 +45,8 @@ function translate(){
 }
 
 function setLanguage(lang){
-    localStorage.setItem('language', lang)
+    localStorage.setItem('language', languages[lang] ? lang : DEFAULT_LANGUAGE)
+
     translate()
 }
 
@@ -65,7 +62,8 @@ function refreshDropdown(){
             <li class="${language === code ? 'selected' : ''}"
                 onclick="${language === code ? 'return false' : 'setLanguage(\'' + code + '\')'}">
                 ${lang['language.name']}
-            </li>`
+            </li>
+        `
     })
 }
 
