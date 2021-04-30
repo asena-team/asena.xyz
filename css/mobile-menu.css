@@ -1,0 +1,101 @@
+.mobile_menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: min-content;
+    max-width: calc(100vw - 50px);
+    height: 100vh;
+    background: var(--body-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 12;
+    padding: 24px 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.24s ease-out;
+    transition-property: left, opacity;
+}
+
+
+.mobile_menu .top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.mobile_menu .top .brand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0 26px;
+    padding-bottom: 16px;
+}
+
+.mobile_menu .top .brand img {
+    max-width: 40px;
+    margin-right: 8px;
+}
+
+.mobile_menu .top .close {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-right: 16px;
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+.mobile_menu .top .close::before, .mobile_menu .top .close::after {
+    content: "";
+    width: 2px;
+    height: 35px;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile_menu .top .close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mobile_menu .links {
+    padding: 16px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.mobile_menu .links a {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background 0.2s ease-out;
+}
+
+.mobile_menu .links a:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.mobile_menu .mobile_menu__item {
+    display: block;
+    width: 80vw;
+    padding: 10px;
+}
+
+.mobile_menu.active {
+    left: 0;
+    opacity: 1;
+}

@@ -1,4 +1,0 @@
-ErrorDocument 404 https://asena.xyz/
-ErrorDocument 403 https://asena.xyz/
-
-DirectoryIndex index.html

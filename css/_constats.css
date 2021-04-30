@@ -1,0 +1,10 @@
+:root {
+    --theme-color: #d43649;
+    --theme-color-transparent: rgba(212, 54, 73, 0.47);
+    --theme-blue: #7289da;
+    --theme-blue-hover: #3556ca;
+    --inline-paragraph: #bec3cd;
+    --body-bg: #1d1e22;
+    --selection-color: rgba(227, 38, 59, 0.68);
+    --document-max-width: 1280px;
+}

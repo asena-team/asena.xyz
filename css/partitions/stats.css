@@ -1,0 +1,26 @@
+.stats .stats_inner {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background: #25272B;
+    border-radius: 5px;
+    padding: 44px 76px;
+    padding-bottom: 0;
+}
+
+.stats .stats_inner .stat {
+    margin: 44px 60px;
+    margin-top: 0;
+}
+
+.stats .stats_inner h4 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.stats .stats_inner p.inline {
+    font-size: 14px;
+}
