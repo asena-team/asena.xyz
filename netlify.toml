@@ -2,7 +2,7 @@
 [[ redirects ]]
     from = "/*"
     to = "/"
-    status = 200
+    status = 404
     force = true
 
 # Minify content
