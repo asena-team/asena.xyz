@@ -1,0 +1,24 @@
+# Redirect all slugs to index
+[[ redirects ]]
+    from = "/*"
+    to = "/"
+    status = 200
+    force = true
+
+# Minify content
+[build.processing]
+    skip_processing = false
+[build.processing.css]
+    bundle = true
+    minify = false
+[build.processing.js]
+    bundle = true
+    minify = false
+[build.processing.html]
+    pretty_urls = true
+[build.processing.images]
+    compress = true
+
+# Disable preview processing
+[context.deploy-preview.processing]
+    skip_processing = true
