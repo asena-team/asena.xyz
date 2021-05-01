@@ -1,19 +1,12 @@
-# Redirect all slugs to index
-[[ redirects ]]
-    from = "/*"
-    to = "/"
-    status = 404
-    force = true
-
 # Minify content
 [build.processing]
     skip_processing = false
 [build.processing.css]
     bundle = true
-    minify = false
+    minify = true
 [build.processing.js]
     bundle = true
-    minify = false
+    minify = true
 [build.processing.html]
     pretty_urls = true
 [build.processing.images]
