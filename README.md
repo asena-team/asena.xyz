@@ -2,8 +2,6 @@
 Website of the Asena discord bot.
 
 ## Preview
-<div style="text-align: center">
-    <img src="https://user-images.githubusercontent.com/20264712/116766505-88cb2200-aa33-11eb-9e4d-2b27574af71a.png">
-</div>
+![unknown](https://user-images.githubusercontent.com/20264712/116766935-c761dc00-aa35-11eb-8fce-7ae4bfa7e711.png)
 
 [website]: https://asena.xyz
