@@ -1,7 +1,7 @@
 const en_US = {
     'language.name': 'English',
     'language.code': 'en_US',
-    'site.title': 'Asena - Giveaway & Poll Bot"',
+    'site.title': 'Asena - Giveaway & Poll Bot',
     'buttons.invite': 'Invite',
     'buttons.wiki': 'Read the Wiki',
     'header.support': 'Support',
