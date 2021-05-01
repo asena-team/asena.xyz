@@ -12,6 +12,26 @@
     }
 }
 
+@keyframes preloader {
+    0% {
+        opacity: 0.1;
+        transform: scale(1);
+        background: #ffffff;
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1.1);
+        background: var(--theme-color);
+    }
+
+    100% {
+        opacity: 0.1;
+        transform: scale(1);
+        background: #ffffff;
+    }
+}
+
 @keyframes popout {
     0% {
         transform: scale(0) translateY(50%);
