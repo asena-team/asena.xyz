@@ -43,7 +43,7 @@ const en_US = {
     'sections.help.blocks.support.description': 'Here you can find instant answers to any question you wonder about.',
     'sections.help.blocks.open.source.title': 'Open Source',
     'sections.help.blocks.open.source.description': 'Want to review Asena\'s source code? Then you are exactly where you are looking for.',
-    'footer.brand.description': 'Asena allows you to create giveaway and surveys. Add it right away and start benefiting from Asena.',
+    'footer.brand.description': 'Asena allows you to create giveaways and surveys. Add it now and start taking advantage of Asena.',
     'footer.brand.business': 'For business inquiries, please reach out at <a href=\"mailto:admin@asena.xyz\">admin@asena.xyz</a>',
     'footer.lists.help.title': 'Get help',
     'footer.lists.help.items.wiki': 'Read the Wiki',
