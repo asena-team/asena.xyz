@@ -54,7 +54,7 @@ const en_US = {
     'footer.premium.title': 'Asena Premium',
     'footer.premium.description': 'Asena Premium, which allows you to create exclusive giveaways, will be here very soon.',
     'footer.premium.button': 'Coming Soon!',
-    'footer.sub.copyright': 'Copyright © 2021 Asena Team <span style=\'color: var(--theme-color);\'>❤</span> All Rights Reserved',
+    'footer.sub.copyright': '© 2021 Asena Team <span style=\'color: var(--theme-color);\'>❤</span> All Rights Reserved',
     'footer.sub.links.user.agreement': 'User Agreement',
     'footer.sub.links.privacy.policy': 'Privacy Policy',
 }
