@@ -140,26 +140,27 @@
 .hero .interactive_raffle .interactive_raffle_message span.tag {
     display: inline-block;
     padding: 0 2px;
-    color: #7289da;
-    background: rgba(114,137,218,.1);
+    color: #ffffff;
+    background: rgba(88, 101, 242, 0.32);
+    font-weight: 500;
     border-radius: 3px;
     line-height: 1.5;
     cursor: pointer;
 }
 
 .hero .interactive_raffle .interactive_raffle_message span.tag:hover {
-    background: #7289da;
+    background: #5865f2;
     color: #ffffff;
 }
 
 .hero .interactive_raffle .interactive_raffle_message .message_reactions {
     position: relative;
     max-width: max-content;
-    padding: 0 8px;
-    background: #3e4147;
+    padding: 3px 9px;
+    background: #2f3136;
     font-size: 15px;
     font-weight: 400;
-    border-radius: 3px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,6 +168,8 @@
     margin-top: 4px;
     overflow: hidden;
     user-select: none;
+    border: 1px solid transparent;
+    transition: border-color 0.13s;
 }
 
 .hero .interactive_raffle .interactive_raffle_message .message_reactions span {
@@ -188,6 +191,11 @@
     color: #dcddde;
 }
 
+.hero .interactive_raffle .interactive_raffle_message .message_reactions:hover {
+    background: #33363c;
+    border-color: #53565a;
+}
+
 .hero .interactive_raffle .interactive_raffle_message .message_reactions img {
     width: 18px;
     height: 18px;
@@ -196,10 +204,11 @@
 }
 
 .hero .interactive_raffle .interactive_raffle_message .message_reactions.selected {
-    background: #474f6c;
+    background: #3b405a;
+    border-color: #5865F2;
 }
 
 .hero .interactive_raffle .interactive_raffle_message .message_reactions.selected span {
-    color: #7289da;
     top: -25px;
+    color: #dcddde;
 }

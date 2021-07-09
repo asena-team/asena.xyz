@@ -35,8 +35,16 @@ if(localStorage.getItem('language')){
 function translate(){
     language = localStorage.getItem('language')
     elements.forEach(function(item){
-        if(item.dataset.translate){
+        if (item.dataset.translate){
             item.innerHTML = (languages[language] || languages[DEFAULT_LANGUAGE])[item.dataset.translate]
+        }
+
+        if (item.dataset.date) {
+            item.innerHTML = new Date(
+                parseInt(item.dataset.date) * 1000).toLocaleTimeString(language.split('_')[0],
+                {
+                year: 'numeric', month: 'long', day: '2-digit', weekday: 'long'
+            })
         }
     })
 
