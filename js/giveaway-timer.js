@@ -28,10 +28,9 @@ const getQueryVariable = (variable) => {
     const query = location.search.substring(1)
     const vars = query.split('&')
 
-    for (let i = 0; i < vars.length; i++) {
+    for(let i = 0; i < vars.length; i++){
         const pair = vars[i].split('=')
-
-        if (decodeURIComponent(pair[0]) === variable) {
+        if(decodeURIComponent(pair[0]) === variable){
             return decodeURIComponent(pair[1])
         }
     }
@@ -39,10 +38,10 @@ const getQueryVariable = (variable) => {
     return false
 }
 
-if (
+if(
     (!getQueryVariable('start') || !getQueryVariable('length')) ||
     (isNaN(parseInt(getQueryVariable('start'))) || isNaN(parseInt(getQueryVariable('length'))))
-) {
+){
     location.href = location.origin
 }
 
@@ -69,12 +68,12 @@ const secondsToString = (delta, locale = DEFAULT_LANGUAGE, chunk = 5) => {
         toString: () => {
             let arr = []
 
-            if (result.year !== 0) arr.push(`${result.year} ${getUnit('year')}`)
-            if (result.month !== 0) arr.push(`${result.month} ${getUnit('month')}`)
-            if (result.day !== 0) arr.push(`${result.day} ${getUnit('day')}`)
-            if (result.hour !== 0) arr.push(`${result.hour} ${getUnit('hour')}`)
-            if (result.minute !== 0) arr.push(`${result.minute} ${getUnit('minute')}`)
-            if (result.second !== 0) arr.push(`${result.second} ${getUnit('second')}`)
+            if(result.year !== 0) arr.push(`${result.year} ${getUnit('year')}`)
+            if(result.month !== 0) arr.push(`${result.month} ${getUnit('month')}`)
+            if(result.day !== 0) arr.push(`${result.day} ${getUnit('day')}`)
+            if(result.hour !== 0) arr.push(`${result.hour} ${getUnit('hour')}`)
+            if(result.minute !== 0) arr.push(`${result.minute} ${getUnit('minute')}`)
+            if(result.second !== 0) arr.push(`${result.second} ${getUnit('second')}`)
 
             return arr.slice(0, chunk).join(' ')
         }
@@ -86,7 +85,10 @@ const start = Math.round(parseInt(getQueryVariable('start')) / 1000)
 const length = parseInt(getQueryVariable('length'))
 const finish = start + length
 const endDate = new Date(finish * 1000).toLocaleTimeString(language.split('_')[0], {
-    year: 'numeric', month: 'long', day: '2-digit', weekday: 'long'
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit',
+    weekday: 'long'
 })
 
 endTimeElem.innerText = endDate
@@ -101,7 +103,7 @@ const finishProcess = () => {
 const progressInterval = setInterval(() => {
     const progress = (((Date.now() / 1000) + 1 - start) / length) * 100
 
-    if (progress > 100 || giveawayEnd) {
+    if(progress > 100 || giveawayEnd){
         progressBar.style.width = '100%'
         progressBar.title = '100%'
         progressBar.parentElement.title = '100%'
@@ -115,9 +117,8 @@ const progressInterval = setInterval(() => {
     progressBar.parentElement.title = progress.toFixed(3) + '%'
 }, 500)
 
-
 const remainingInterval = setInterval(() => {
-    if (giveawayEnd) {
+    if(giveawayEnd){
         return clearInterval(remainingInterval)
     }
 
@@ -130,36 +131,32 @@ const remainingInterval = setInterval(() => {
     const leftSeconds = leftTime.second + (leftTime.minute * 60) + (leftTime.hour * 60 * 60) + (
         leftTime.day * 24 * 60 * 60) + (leftTime.month * daysInMonth * 24 * 60 * 60)
 
-    if (leftTime.second === 0) {
+    if(leftTime.second === 0){
         leftTime.second = 60
         leftTime.minute = leftTime.minute - 1 < 0 ? 59 : leftTime.minute - 1
     }
 
-    if (leftTime.second === 60 && leftTime.minute === 59) {
+    if(leftTime.second === 60 && leftTime.minute === 59){
         leftTime.hour = leftTime.hour - 1 < 0 ? 23 : leftTime.hour - 1
     }
 
-    if (leftTime.second === 60 && leftTime.minute === 59 && leftTime.hour === 23) {
+    if(leftTime.second === 60 && leftTime.minute === 59 && leftTime.hour === 23){
         leftTime.day = leftTime.day - 1 < 0 ? daysInMonth - 1 : leftTime.day - 1
     }
 
-    if (leftTime.second === 60 && leftTime.minute === 59 && leftTime.hour === 23 && leftTime.day === daysInMonth - 1) {
+    if(leftTime.second === 60 && leftTime.minute === 59 && leftTime.hour === 23 && leftTime.day === daysInMonth - 1){
         leftTime.month = leftTime.month - 1 < 0 ? 11 : leftTime.month - 1
     }
 
-    if (leftSeconds <= daysInMonth * 86400) {
+    if(leftSeconds <= daysInMonth * 86400){
         remainingElem.month.parentElement.remove()
-
-        if (leftSeconds <= 86400) {
+        if(leftSeconds <= 86400){
             remainingElem.day.parentElement.remove()
-
-            if (leftSeconds <= 3600) {
+            if(leftSeconds <= 3600){
                 remainingElem.hour.parentElement.remove()
-
-                if (leftSeconds <= 60) {
+                if(leftSeconds <= 60){
                     remainingElem.minute.parentElement.remove()
-
-                    if (leftSeconds <= 0) {
+                    if(leftSeconds <= 0){
                         giveawayEnd = true
                         finishProcess()
                         remainingElem.second.parentElement.remove()
