@@ -173,7 +173,7 @@
 }
 
 .hero .interactive_raffle .interactive_raffle_message .message_reactions span {
-    color: #72767d;
+    color: #dcddde;
     position: relative;
     transition: top 0.14s ease-in-out;
     top: 0;
@@ -185,10 +185,6 @@
     left: 0;
     top: 25px;
     transition: top 0.14s ease-in-out;
-}
-
-.hero .interactive_raffle .interactive_raffle_message .message_reactions:hover span {
-    color: #dcddde;
 }
 
 .hero .interactive_raffle .interactive_raffle_message .message_reactions:hover {

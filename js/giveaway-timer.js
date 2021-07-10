@@ -1,6 +1,6 @@
-const popupCurtain = document.querySelector('.giveaway-timer .popup-curtain')
-const popup = document.querySelector('.giveaway-timer .popup')
 const remainingElem = {
+    main: document.querySelector('.timer'),
+    end: document.querySelector('.timer-end'),
     month: document.querySelector('.timer .timer-unit.month .number'),
     week: document.querySelector('.timer .timer-unit.week .number'),
     day: document.querySelector('.timer .timer-unit.day .number'),
@@ -33,6 +33,13 @@ const getQueryVariable = (variable) => {
     }
 
     return false
+}
+
+if (
+    (!getQueryVariable('start') || !getQueryVariable('length')) ||
+    (isNaN(parseInt(getQueryVariable('start'))) || isNaN(parseInt(getQueryVariable('length'))))
+) {
+    location.href = location.origin
 }
 
 const getUnit = (unit) => {
@@ -72,20 +79,6 @@ const secondsToString = (delta, locale = DEFAULT_LANGUAGE, chunk = 5) => {
     })
 }
 
-const openPopup = () => {
-    popupCurtain.style.display = 'block'
-    popup.style.visibility = 'visible'
-
-    setTimeout(() => {
-        popupCurtain.style.opacity = 1
-        popup.style.opacity = 1
-    })
-}
-
-if (!getQueryVariable('start') || !getQueryVariable('length')) {
-    location.href = location.origin
-}
-
 let giveawayEnd = false
 const start = Math.round(parseInt(getQueryVariable('start')) / 1000)
 const length = parseInt(getQueryVariable('length'))
@@ -97,20 +90,25 @@ const endDate = new Date(finish * 1000).toLocaleTimeString(language.split('_')[0
 endTimeElem.innerText = endDate
 endTimeElem.dataset.date = finish
 
-const progressInterval = setInterval(() => {
-    const progress = Math.round((((Date.now() / 1000) - start) / length) * 100);
+const finishProcess = () => {
+    remainingElem.end.style.display = 'block'
+    remainingElem.end.style.opacity = '1'
+    remainingElem.main.remove()
+}
 
-    if (progress >= 100) {
+const progressInterval = setInterval(() => {
+    const progress = (((Date.now() / 1000) - start) / length) * 100
+
+    if (progress > 100) {
         progressBar.style.width = '100%'
         giveawayEnd = true
-        openPopup()
-
+        finishProcess()
         return clearInterval(progressInterval);
     }
 
-    progressBar.style.width = progress + '%'
-    progressBar.title = progress + '%'
-    progressBar.parentElement.title = progress + '%'
+    progressBar.style.width = progress.toFixed(3) + '%'
+    progressBar.title = progress.toFixed(3) + '%'
+    progressBar.parentElement.title = progress.toFixed(3) + '%'
 }, 500)
 
 
@@ -118,14 +116,33 @@ const remainingInterval = setInterval(() => {
     const leftTime = secondsToString(finish - Date.now() / 1000)
 
     if (giveawayEnd) {
-        remainingElem.month.innerText = 0
-        remainingElem.week.innerText = 0
-        remainingElem.day.innerText = 0
-        remainingElem.hour.innerText = 0
-        remainingElem.minute.innerText = 0
-        remainingElem.second.innerText = 0
-
         return clearInterval(remainingInterval)
+    }
+
+    if (leftTime.month === 0) {
+        remainingElem.month.parentElement.remove()
+
+        if (leftTime.week === 0) {
+            remainingElem.week.parentElement.remove()
+
+            if (leftTime.day === 0) {
+                remainingElem.day.parentElement.remove()
+
+                if (leftTime.hour === 0) {
+                    remainingElem.hour.parentElement.remove()
+
+                    if (leftTime.minute === 0) {
+                        remainingElem.minute.parentElement.remove()
+
+                        if (leftTime.second === 0) {
+                            giveawayEnd = true
+                            finishProcess()
+                            remainingElem.second.parentElement.remove()
+                        }
+                    }
+                }
+            }
+        }
     }
 
     remainingElem.month.innerText = leftTime.month
@@ -133,5 +150,5 @@ const remainingInterval = setInterval(() => {
     remainingElem.day.innerText = leftTime.day
     remainingElem.hour.innerText = leftTime.hour
     remainingElem.minute.innerText = leftTime.minute
-    remainingElem.second.innerText = leftTime.second
+    remainingElem.second.innerText = leftTime.second === 0 ? 60 : leftTime.second
 }, 500)
