@@ -69,8 +69,12 @@
     display: inline-block;
     margin-top: 20px;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 800;
     opacity: 0.8;
+}
+
+.giveaway-timer .end-time span:last-child {
+    font-weight: 400;
 }
 
 /* Responsive */
