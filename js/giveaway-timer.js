@@ -103,6 +103,8 @@ const progressInterval = setInterval(() => {
 
     if (progress > 100 || giveawayEnd) {
         progressBar.style.width = '100%'
+        progressBar.title = '100%'
+        progressBar.parentElement.title = '100%'
         giveawayEnd = true
         finishProcess()
         return clearInterval(progressInterval);
