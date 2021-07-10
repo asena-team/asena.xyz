@@ -1,0 +1,120 @@
+.giveaway-timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.giveaway-timer h2 {
+    font-size: 40px;
+}
+
+.giveaway-timer .timer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s ease-out;
+}
+
+.giveaway-timer .timer .timer-unit {
+    display: block;
+    padding: 15px;
+}
+
+.giveaway-timer .timer .timer-unit .number {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--theme-color);
+}
+
+.giveaway-timer .timer .timer-unit .unit {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--title-white);
+}
+
+.giveaway-timer .timer-end {
+    color: var(--theme-color);
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    display: none;
+}
+
+.giveaway-timer .timer-progress-bar {
+    width: 500px;
+    max-width: 96%;
+    height: 15px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.24);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.giveaway-timer .timer-progress-bar .bar {
+    width: 0;
+    height: 100%;
+    display: block;
+    background: var(--theme-blue);
+    transition: width 0.12s ease-out;
+}
+
+.giveaway-timer .end-time {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+.giveaway-timer .end-time span:last-child {
+    font-weight: 400;
+}
+
+/* Responsive */
+@media only screen and (max-width: 500px) {
+    .giveaway-timer h2 {
+        font-size: 32px;
+    }
+
+    .giveaway-timer .end-time {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .giveaway-timer .end-time {
+        font-size: 16px;
+    }
+
+    .giveaway-timer .timer .timer-unit {
+        padding: 10px;
+    }
+
+    .giveaway-timer .timer .timer-unit .number {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .giveaway-timer h2 {
+        font-size: 28px;
+    }
+
+    .giveaway-timer .timer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 5px;
+    }
+
+    .giveaway-timer .end-time {
+        font-size: 16px;
+    }
+}

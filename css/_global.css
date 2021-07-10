@@ -47,7 +47,7 @@ span.br {
 }
 
 h1, h2, h3, h4, h5, h6, p, span {
-    color: #eef1f5;
+    color: var(--title-white);
     font-family: -apple-system, 'Inter', 'Poppins', 'Segoe UI', sans-serif, monospace;
 }
 
@@ -70,6 +70,10 @@ h3 {
 h4 {
     font-size: 23px;
     font-weight: 700;
+}
+
+.color-theme {
+    color: var(--theme-color);
 }
 
 p {
@@ -148,12 +152,12 @@ a.button.button__bordered:hover {
 .container {
 }
 
-.partition:first-child {
+.section:first-child {
     padding-bottom: 90px;
     padding-top: 80px;
 }
 
-.partition {
+.section {
     max-width: var(--document-max-width);
     margin: auto;
     width: 100%;
@@ -161,11 +165,11 @@ a.button.button__bordered:hover {
     position: relative;
 }
 
-.partition-wrapper {
+.section-wrapper {
     width: 100%;
 }
 
-.partition > p.inline {
+.section > p.inline {
     margin-top: 8px;
 }
 
@@ -173,7 +177,7 @@ a.button.button__bordered:hover {
     background: #242529;
 }
 
-.different_color .partition {
+.different_color .section {
     min-height: max-content !important;
     height: max-content !important;
     max-height: max-content !important;

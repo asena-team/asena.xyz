@@ -1,9 +1,9 @@
 @media only screen and (max-width: 1350px) {
-    .partition, .footer, .header_wrapper {
+    .section, .footer, .header_wrapper {
         padding: 0 50px;
     }
 
-    .partition-wrapper.different_color:last-child {
+    .section-wrapper.different_color:last-child {
         padding: 0 30px;
     }
 
@@ -64,7 +64,7 @@
         margin-right: 20px;
     }
 
-    .partition {
+    .section {
         padding-right: 40px !important;
         padding-left: 40px !important;
     }
@@ -109,7 +109,7 @@
         margin-left: 20px;
     }
 
-    .partition, .footer, .header_wrapper {
+    .section, .footer, .header_wrapper {
         padding: 0 40px;
     }
 
@@ -261,7 +261,7 @@
 }
 
 @media only screen and (max-width: 550px) {
-    .partition {
+    .section {
         padding-right: 16px !important;
         padding-left: 16px !important;
     }

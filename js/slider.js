@@ -14,6 +14,6 @@ const swiper = new Swiper('.swiper-container', {
     }
 })
 
-setInterval(function(){
+setInterval(() => {
     swiper.slideNext()
 }, 7500)

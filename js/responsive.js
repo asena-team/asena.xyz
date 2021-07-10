@@ -1,8 +1,8 @@
-const hamburgerMenu = document.querySelectorAll('.hamburger')[0]
-const closeButton = document.querySelectorAll('.mobile_menu .top .close')[0]
-const mobileMenu = document.querySelectorAll('.mobile_menu')[0]
-const curtain = document.querySelectorAll('.curtain')[0]
-const headerMenuList = document.querySelectorAll('.header .links')[0]
+const hamburgerMenu = document.querySelector('.hamburger')
+const closeButton = document.querySelector('.mobile_menu .top .close')
+const mobileMenu = document.querySelector('.mobile_menu')
+const curtain = document.querySelector('.curtain')
+const headerMenuList = document.querySelector('.header .links')
 
 function openMobileMenu(){
     curtain.style.display = 'block'
@@ -10,7 +10,7 @@ function openMobileMenu(){
     setTimeout(function(){
         curtain.classList.add('active')
         mobileMenu.classList.add('active')
-    }, 1)
+    })
     let i = window.scrollY
     const interval = setInterval(function(){
         if(window.scrollY <= 0){
@@ -28,7 +28,7 @@ function closeMobileMenu(){
     setTimeout(function(){
         curtain.classList.remove('active')
         mobileMenu.classList.remove('active')
-    }, 1)
+    })
 }
 
 hamburgerMenu.onclick = openMobileMenu
