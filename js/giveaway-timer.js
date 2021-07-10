@@ -99,24 +99,22 @@ const finishProcess = () => {
 }
 
 const progressInterval = setInterval(() => {
-    const progress = (((Date.now() / 1000) - start) / length) * 100
+    const progress = (((Date.now() / 1000) + 1 - start) / length) * 100
 
-    if (progress > 100) {
+    if (progress > 100 || giveawayEnd) {
         progressBar.style.width = '100%'
         giveawayEnd = true
         finishProcess()
         return clearInterval(progressInterval);
     }
 
-    progressBar.style.width = progress.toFixed(3) + '%'
+    progressBar.style.width = progress + '%'
     progressBar.title = progress.toFixed(3) + '%'
     progressBar.parentElement.title = progress.toFixed(3) + '%'
 }, 500)
 
 
 const remainingInterval = setInterval(() => {
-    const leftTime = secondsToString(finish - Date.now() / 1000)
-
     if (giveawayEnd) {
         return clearInterval(remainingInterval)
     }
@@ -125,6 +123,10 @@ const remainingInterval = setInterval(() => {
     const month = dt.getMonth() + 1
     const year = dt.getFullYear()
     const daysInMonth = new Date(year, month, 0).getDate()
+
+    const leftTime = secondsToString(finish - Date.now() / 1000)
+    const leftSeconds = leftTime.second + (leftTime.minute * 60) + (leftTime.hour * 60 * 60) + (
+        leftTime.day * 24 * 60 * 60) + (leftTime.month * daysInMonth * 24 * 60 * 60)
 
     if (leftTime.second === 0) {
         leftTime.second = 60
@@ -143,19 +145,19 @@ const remainingInterval = setInterval(() => {
         leftTime.month = leftTime.month - 1 < 0 ? 11 : leftTime.month - 1
     }
 
-    if (leftTime.month === 0) {
+    if (leftSeconds <= daysInMonth * 86400) {
         remainingElem.month.parentElement.remove()
 
-        if (leftTime.day === 0) {
+        if (leftSeconds <= 86400) {
             remainingElem.day.parentElement.remove()
 
-            if (leftTime.hour === 0) {
+            if (leftSeconds <= 3600) {
                 remainingElem.hour.parentElement.remove()
 
-                if (leftTime.minute === 0 || leftTime.minute === 59) {
+                if (leftSeconds <= 60) {
                     remainingElem.minute.parentElement.remove()
 
-                    if (leftTime.second === 0 || leftTime.second === 60) {
+                    if (leftSeconds <= 0) {
                         giveawayEnd = true
                         finishProcess()
                         remainingElem.second.parentElement.remove()
