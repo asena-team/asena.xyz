@@ -10,10 +10,10 @@ const remainingElem = {
 const endTimeElem = document.querySelector('.giveaway-timer .end-time .time')
 const progressBar = document.querySelector('.giveaway-timer .timer-progress-bar .bar')
 
-let dt = new Date()
-let month = dt.getMonth() + 1
-let year = dt.getFullYear()
-let daysInMonth = new Date(year, month, 0).getDate()
+const dt = new Date()
+const month = dt.getMonth() + 1
+const year = dt.getFullYear()
+const daysInMonth = new Date(year, month, 0).getDate()
 
 const TimeUnitSeconds = {
     year: 31536000,
@@ -38,10 +38,11 @@ const getQueryVariable = (variable) => {
     return false
 }
 
-if(
-    (!getQueryVariable('start') || !getQueryVariable('length')) ||
-    (isNaN(parseInt(getQueryVariable('start'))) || isNaN(parseInt(getQueryVariable('length'))))
-){
+const startMS = parseInt(getQueryVariable('start'))
+const startUnixTimestamp = Math.round(startMS / 1000)
+const length = Math.round(parseInt(getQueryVariable('length')))
+const finish = startUnixTimestamp + length
+if(isNaN(finish) || startMS >= +new Date()){
     location.href = location.origin
 }
 
@@ -80,18 +81,12 @@ const secondsToString = (delta, locale = DEFAULT_LANGUAGE, chunk = 5) => {
     })
 }
 
-let giveawayEnd = false
-const start = Math.round(parseInt(getQueryVariable('start')) / 1000)
-const length = parseInt(getQueryVariable('length'))
-const finish = start + length
-const endDate = new Date(finish * 1000).toLocaleTimeString(language.split('_')[0], {
+endTimeElem.innerText = new Date(finish * 1000).toLocaleTimeString(language.split('_')[0], {
     year: 'numeric',
     month: 'long',
     day: '2-digit',
     weekday: 'long'
 })
-
-endTimeElem.innerText = endDate
 endTimeElem.dataset.date = finish
 
 const finishProcess = () => {
@@ -100,8 +95,9 @@ const finishProcess = () => {
     remainingElem.main.remove()
 }
 
+let giveawayEnd = false
 const progressInterval = setInterval(() => {
-    const progress = (((Date.now() / 1000) + 1 - start) / length) * 100
+    const progress = (((Date.now() / 1000) + 1 - startUnixTimestamp) / length) * 100
 
     if(progress > 100 || giveawayEnd){
         progressBar.style.width = '100%'
