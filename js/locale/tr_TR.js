@@ -18,7 +18,7 @@ const tr_TR = {
     'sections.welcome.giveaway.prize': PRIZE,
     'sections.welcome.giveaway.started': '<img src="https://cdn.discordapp.com/emojis/716956121289588736.gif?v=1" alt="uwu">&nbsp;<b class="bold">ÇEKİLİŞ BAŞLADI</b>&nbsp;<img src="https://cdn.discordapp.com/emojis/716956121289588736.gif?v=1" alt="uwu">',
     'sections.welcome.giveaway.ended': '<img src="https://cdn.discordapp.com/emojis/716956121289588736.gif?v=1" alt="uwu"> Tebrikler <span class="tag">@Anonymous</span>! <b>' + PRIZE + '</b> kazandınız.',
-    'sections.welcome.giveaway.embed.description.1': 'Çekilişe katılmak için <img src="https://discord.com/assets/b052a4bef57c1aa73cd7cff5bc4fb61d.svg" alt="tada"> emojisine tıklayın!<br> Süre: <b>1 dakika</b><br> Bitmesine: ',
+    'sections.welcome.giveaway.embed.description.1': 'Çekilişe katılmak için <img src="images/tada.svg" alt="tada"> emojisine tıklayın!<br> Süre: <b>1 dakika</b><br> Bitmesine: ',
     'sections.welcome.giveaway.embed.description.2': ' <b>saniye</b><br> Oluşturan: <span class="tag">@Asena</span>',
     'sections.stats.title': 'ASENA İLE TANIŞIN',
     'sections.stats.subtitle': 'Çekiliş, Anket ve Soru',

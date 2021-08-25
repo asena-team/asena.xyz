@@ -18,7 +18,7 @@ const en_US = {
     'sections.welcome.giveaway.prize': PRIZE,
     'sections.welcome.giveaway.started': '<img src="https://cdn.discordapp.com/emojis/716956121289588736.gif?v=1" alt="uwu">&nbsp;<b class="bold">GIVEAWAY STARTED</b>&nbsp;<img src="https://cdn.discordapp.com/emojis/716956121289588736.gif?v=1" alt="uwu">',
     'sections.welcome.giveaway.ended': '<img src="https://cdn.discordapp.com/emojis/716956121289588736.gif?v=1" alt="uwu"> Congratulations <span class="tag">@Anonymous</span>! You won <b>' + PRIZE + '</b>.',
-    'sections.welcome.giveaway.embed.description.1': 'Click on the <img src="https://discord.com/assets/b052a4bef57c1aa73cd7cff5bc4fb61d.svg" alt="tada"> emoji to enter the giveaway!<br> Time: <b>1 minutes</b><br> Time remaining: ',
+    'sections.welcome.giveaway.embed.description.1': 'Click on the <img src="images/tada.svg" alt="tada"> emoji to enter the giveaway!<br> Time: <b>1 minutes</b><br> Time remaining: ',
     'sections.welcome.giveaway.embed.description.2': ' <b>seconds</b><br> Hosted by: <span class="tag">@Asena</span>',
     'sections.stats.title': 'MEET ASENA',
     'sections.stats.subtitle': 'Giveaway & Poll',
