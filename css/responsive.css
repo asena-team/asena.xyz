@@ -7,7 +7,7 @@
         padding: 0 30px;
     }
 
-    .slider_part .swiper-slide .swiper-slide-wrapper {
+    .slider_part .swiper-slide .swiper-slide-wrapper, .content {
         min-width: auto;
         max-width: calc(100% - 100px);
     }
