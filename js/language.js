@@ -1,6 +1,6 @@
 const languages = {tr_TR, en_US}
 
-const elements = document.querySelectorAll('*')
+const elements = document.querySelectorAll('*') // TODO::fetch data translate
 const dropdownLanguages = document.querySelectorAll('.lang_select .dropdown_languages ul')[0]
 const selectedLanguage = document.querySelectorAll('.lang_select .selected_language .language_name')[0]
 const sliderImages = document.querySelectorAll('.swiper-container .swiper-wrapper img.slide_image')
