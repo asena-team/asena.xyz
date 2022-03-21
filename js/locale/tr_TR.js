@@ -65,6 +65,6 @@ const tr_TR = {
     'footer.premium.description': 'Ayrıcalıklı çekilişler oluşturmanıza olanak sağlayan Asena Premium çok yakında burada olacak.',
     'footer.premium.button': 'Çok Yakında!',
     'footer.sub.copyright': '© 2021 Asena Team <span style=\'color: var(--theme-color);\'>❤</span> Tüm Hakları Saklıdır',
-    'footer.sub.links.user.agreement': 'Kullanıcı Sözleşmesi',
+    'footer.sub.links.terms': 'Kullanım Koşulları',
     'footer.sub.links.privacy.policy': 'Gizlilik Politikası',
 }
