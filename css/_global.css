@@ -183,7 +183,3 @@ a.button.button__bordered:hover {
     max-height: max-content !important;
     padding: 130px 0;
 }
-
-.paragraph {
-    font-family: 'Open Sans', sans-serif;
-}

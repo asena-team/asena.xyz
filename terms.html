@@ -27,222 +27,183 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
 
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/sections/prose.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <div class="preloader_container">
-        <div class="preload_animation">
-            <span style="--d:0s;"></span>
-            <span style="--d:0.3s;"></span>
-            <span style="--d:0.6s;"></span>
+<div class="preloader_container">
+    <div class="preload_animation">
+        <span style="--d:0s;"></span>
+        <span style="--d:0.3s;"></span>
+        <span style="--d:0.6s;"></span>
+    </div>
+</div>
+<header class="header">
+    <div class="header_wrapper">
+        <div class="link_items">
+            <div class="icon">
+                <a href="/">
+                    <img src="images/favicon.png" alt="Asena Logo">
+                </a>
+            </div>
+            <div class="hamburger" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="https://wiki.asena.xyz" target="_blank">Wiki</a></li>
+                    <li><a href="https://dc.asena.xyz" target="_blank" data-translate="header.support"></a></li>
+                    <li><a href="https://top.gg/bot/716259870910840832/vote" target="_blank"
+                           data-translate="header.vote"></a></li>
+                    <li><a href="https://dev.asena.xyz" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lang_select">
+            <div class="selected_language">
+                <span class="language_name flex items-center justify-center">Unknown</span>
+            </div>
+            <div class="dropdown_languages">
+                <ul></ul>
+            </div>
         </div>
     </div>
-    <div class="header">
-        <div class="header_wrapper">
-            <div class="link_items">
-                <div class="icon">
-                    <a href="/">
-                        <img src="images/favicon.png" alt="Asena Logo">
-                    </a>
-                </div>
-                <div class="hamburger" style="display: none;">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="links">
+</header>
+<div class="mobile_menu">
+    <div class="top">
+        <div class="brand">
+            <img src="images/brand_logo.svg" alt="Asena Logo">
+            Asena
+        </div>
+        <div class="close"></div>
+    </div>
+    <div class="links">
+        <a href="https://wiki.asena.xyz" target="_blank">
+            <div class="mobile_menu__item">
+                Wiki
+            </div>
+        </a>
+        <a href="https://dc.asena.xyz" target="_blank">
+            <div class="mobile_menu__item" data-translate="header.support"></div>
+        </a>
+        <a href="https://top.gg/bot/716259870910840832/vote" target="_blank">
+            <div class="mobile_menu__item" data-translate="header.vote"></div>
+        </a>
+        <a href="https://dev.asena.xyz" target="_blank">
+            <div class="mobile_menu__item">
+                GitHub
+            </div>
+        </a>
+    </div>
+</div>
+<div class="curtain"></div>
+
+<div class="section-wrapper">
+    <main class="section flex flex-col justify-start prose">
+        <h1>Kullanım Koşulları</h1>
+        <p>Asena kullandıktan veya bir sunucuya davet edildikten sonra, botun hizmet şartlarını otomatik olarak kabul etmiş olursunuz.</p>
+
+        <h2>1. Bot ne sunuyor?</h2>
+        <p>Bot, Türkçe ve İngilizce bir çekiliş, anket ve soru botudur. Size hızlı ve kolay bir şekilde çekilişler oluşturmak için birçok komut ve ayar sunar.</p>
+
+        <h2>2. Botu kullanmak için gereksinimler nelerdir?</h2>
+        <ul>
+            <li>Her kullanıcı herhangi bir ücret ve benzeri ödeme yapmadan botu kullanabilir.</li>
+            <li>Bot spam gönderilemez veya istismar edilemez.</li>
+            <li>Hatalar veya benzerleri ortaya çıkarsa, bunlar derhal bildirilmelidir.</li>
+            <li>Bot sadece yasal amaçlar için kullanılmalıdır.</li>
+            <li>Bot herhangi bir şekilde adil bir şekilde kullanılmazsa, bot yasağı ile sonuçlanabilir.</li>
+        </ul>
+
+        <h2>3. İletişim</h2>
+        <p>Yardıma veya benzeri bir şeye ihtiyacınız varsa, iletişime geçmekten çekinmeyin.</p>
+
+        <h2>4. Veri korumasına ilişkin bilgiler</h2>
+        <p>
+            <a href="privacy.html">Veri korunumu ile ilgili bilgiler.</a>
+        </p>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer_wrapper">
+        <div class="footer_top">
+            <div class="footer_brand">
+                <img src="images/brand_logo.svg" alt="Asena Logo">
+                <p data-translate="footer.brand.description"></p>
+                <p data-translate="footer.brand.business"></p>
+            </div>
+            <div class="footer_right">
+                <div class="footer_list">
+                    <span class="footer_inline" data-translate="footer.lists.help.title"></span>
                     <ul>
-                        <li><a href="https://wiki.asena.xyz" target="_blank">Wiki</a></li>
-                        <li><a href="https://dc.asena.xyz" target="_blank" data-translate="header.support"></a></li>
-                        <li><a href="https://top.gg/bot/716259870910840832/vote" target="_blank"
-                               data-translate="header.vote"></a></li>
-                        <li><a href="https://dev.asena.xyz" target="_blank">GitHub</a></li>
+                        <li>
+                            <a href="https://wiki.asena.xyz" target="_blank" class="underline"
+                               data-translate="footer.lists.help.items.wiki">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dc.asena.xyz" target="_blank" class="underline"
+                               data-translate="footer.lists.help.items.support">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dev.asena.xyz" target="_blank" class="underline"
+                               data-translate="footer.lists.help.items.open.source">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://issue.asena.xyz" target="_blank" class="underline"
+                               data-translate="footer.lists.help.items.issue">
+                            </a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-            <div class="lang_select">
-                <div class="selected_language">
-                    <span class="language_name flex items-center justify-center">Unknown</span>
+                <div class="footer_list">
+                    <span class="footer_inline" data-translate="footer.lists.find.us.title"></span>
+                    <ul>
+                        <li>
+                            <a href="https://top.gg/bot/716259870910840832" target="_blank" class="underline">
+                                Top.gg
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://discord.bots.gg/bots/716259870910840832" target="_blank" class="underline">
+                                Bots.gg
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="dropdown_languages">
-                    <ul></ul>
+                <div class="footer_description">
+                    <span><b data-translate="footer.premium.title"></b></span>
+                    <span class="footer_inline" data-translate="footer.premium.description"></span>
+                    <a href="https://invite.asena.xyz" class="button button__blue"
+                       data-translate="footer.premium.button">
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="mobile_menu">
-        <div class="top">
-            <div class="brand">
-                <img src="images/brand_logo.svg" alt="Asena Logo">
-                Asena
+        <div class="footer_bottom">
+            <div class="footer_copyright">
+                <span data-translate="footer.sub.copyright"></span>
             </div>
-            <div class="close"></div>
-        </div>
-        <div class="links">
-            <a href="https://wiki.asena.xyz" target="_blank">
-                <div class="mobile_menu__item">
-                    Wiki
-                </div>
-            </a>
-            <a href="https://dc.asena.xyz" target="_blank">
-                <div class="mobile_menu__item" data-translate="header.support"></div>
-            </a>
-            <a href="https://top.gg/bot/716259870910840832/vote" target="_blank">
-                <div class="mobile_menu__item" data-translate="header.vote"></div>
-            </a>
-            <a href="https://dev.asena.xyz" target="_blank">
-                <div class="mobile_menu__item">
-                    GitHub
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="curtain"></div>
-
-    <div class="section-wrapper pb-[36px]">
-        <div class="section flex flex-col justify-start">
-            <div class="mb-[30px] flex items-center justify-start privacy-title-box mt-[56px]">
-                <h3 class="text-[36px] font-bold text-[#d43649]">Kullanıcı Sözleşmesi</h3>
-            </div>
-            <!-- 
-                <h3 class="text-[24px] text-[#eef1f5] mb-[18px] font-bold" id="title"></h3> başlık için.
-                <p class="text-[18px] font-normal text-[#c2c5c9] tracking-wide leading-loose" id="paragraph"> </p> paragraf
-                <a href="" class="text-[#eef1f5] decoration-1 underline"></a> link falan eklemen gerekirse.
-
-                <ul class="list-disc ml-8 text-[#c2c5c9] text-[18px]">
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                </ul>
-                ile madde madde textler atarsın. ul clasın içine list-dics yerine list-decimal 
-                yazarsan nokta nokta sıralamak yerine 1. 2. 3. şeklinde maddeleri sıralar.
-
-                <br> ile bir alt satıra geçersin. 2 br atarsan 2 alt satıra geçersin.
-            -->
-
-            <h3 class="text-[24px] text-[#eef1f5] mb-[18px] font-bold">Lorem Ipsum </h3>
-            <p class="text-[18px] font-normal text-[#c2c5c9] tracking-wide leading-loose paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos magnam sapiente cupiditate quaerat voluptatum aspernatur placeat, delectus nobis praesentium doloribus, molestiae dolores? Ullam quae atque nulla eaque quasi tempora?
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. <a href="" class="text-[#eef1f5] decoration-1 underline">Odio</a>, optio aspernatur omnis sint hic iure quae voluptatum placeat quasi distinctio laudantium quos, labore quo nostrum ducimus repellat nemo ad? Nesciunt.
-                <br> <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quos aperiam quo est! Voluptatibus, odio inventore neque doloremque optio laudantium quam dolorum sit beatae deleniti accusamus quas autem consectetur? Error.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequatur nihil nam totam nemo, blanditiis, necessitatibus id atque, enim odit et quaerat voluptas. Vel praesentium, facilis repudiandae magnam amet porro.
+            <div class="footer_bottom_links">
+                <a href="mailto:admin@asena.xyz" class="underline underline_blue">admin@asena.xyz</a>
                 <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sit, sint deserunt facere veritatis velit, nostrum dolore enim numquam similique odit dicta aut. Dolorem ducimus delectus, tenetur voluptatum obcaecati doloremque?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, sint eligendi similique facilis quis nesciunt ipsam unde optio consequuntur incidunt, eum pariatur consequatur deleniti. Vitae quia incidunt quasi velit pariatur?
-            </p>
-            <br> <!-- BR etiketi bir alt satıra geçmeni sağlar -->
-
-            <h3 class="text-[24px] text-[#eef1f5] mb-[18px] font-bold">Lorem Ipsum </h3>
-            <p class="text-[18px] font-normal text-[#c2c5c9] tracking-wide leading-loose paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos magnam sapiente cupiditate quaerat voluptatum aspernatur placeat, delectus nobis praesentium doloribus, molestiae dolores? Ullam quae atque nulla eaque quasi tempora?
-                <br> <br>
-
-                <ul class="list-disc ml-8 text-[#c2c5c9] text-[18px]">
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                </ul>
-            </p>
-            <br> <!-- BR etiketi bir alt satıra geçmeni sağlar -->
-
-            
-            <h3 class="text-[24px] text-[#eef1f5] mb-[18px] font-bold">Lorem İpsum </h3>
-            <p class="text-[18px] font-normal text-[#c2c5c9] tracking-wide leading-loose paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos magnam sapiente cupiditate quaerat voluptatum aspernatur placeat, delectus nobis praesentium doloribus, molestiae dolores? Ullam quae atque nulla eaque quasi tempora?
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, optio aspernatur omnis sint hic iure quae voluptatum placeat quasi distinctio laudantium quos, labore quo nostrum ducimus repellat nemo ad? Nesciunt.
-                <br> <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quos aperiam quo est! Voluptatibus, odio inventore neque doloremque optio laudantium quam dolorum sit beatae deleniti accusamus quas autem consectetur? Error.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequatur nihil nam totam nemo, blanditiis, necessitatibus id atque, enim odit et quaerat voluptas. Vel praesentium, facilis repudiandae magnam amet porro.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.  A, sit, sint deserunt facere veritatis velit, nostrum dolore enim numquam similique odit dicta aut. Dolorem ducimus delectus, tenetur voluptatum obcaecati doloremque?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, sint eligendi similique facilis quis nesciunt ipsam unde optio consequuntur incidunt, eum pariatur consequatur deleniti. Vitae quia incidunt quasi velit pariatur?
-            </p>
-            <br> <!-- BR etiketi bir alt satıra geçmeni sağlar -->
-
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="footer_wrapper">
-            <div class="footer_top">
-                <div class="footer_brand">
-                    <img src="images/brand_logo.svg" alt="Asena Logo">
-                    <p data-translate="footer.brand.description"></p>
-                    <p data-translate="footer.brand.business"></p>
-                </div>
-                <div class="footer_right">
-                    <div class="footer_list">
-                        <span class="footer_inline" data-translate="footer.lists.help.title"></span>
-                        <ul>
-                            <li>
-                                <a href="https://wiki.asena.xyz" target="_blank" class="underline"
-                                   data-translate="footer.lists.help.items.wiki">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://dc.asena.xyz" target="_blank" class="underline"
-                                   data-translate="footer.lists.help.items.support">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://dev.asena.xyz" target="_blank" class="underline"
-                                   data-translate="footer.lists.help.items.open.source">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://issue.asena.xyz" target="_blank" class="underline"
-                                   data-translate="footer.lists.help.items.issue">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer_list">
-                        <span class="footer_inline" data-translate="footer.lists.find.us.title"></span>
-                        <ul>
-                            <li>
-                                <a href="https://top.gg/bot/716259870910840832" target="_blank" class="underline">
-                                    Top.gg
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://discord.bots.gg/bots/716259870910840832" target="_blank" class="underline">
-                                    Bots.gg
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer_description">
-                        <span><b data-translate="footer.premium.title"></b></span>
-                        <span class="footer_inline" data-translate="footer.premium.description"></span>
-                        <a href="https://invite.asena.xyz" class="button button__blue"
-                           data-translate="footer.premium.button">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer_bottom">
-                <div class="footer_copyright">
-                    <span data-translate="footer.sub.copyright"></span>
-                </div>
-                <div class="footer_bottom_links">
-                    <a href="mailto:admin@asena.xyz" class="underline underline_blue">admin@asena.xyz</a>
-                    <br>
-                    <a href="terms.html" class="underline" data-translate="footer.sub.links.terms"></a>
-                    <br>
-                    <a href="privacy.html" class="underline" data-translate="footer.sub.links.privacy.policy"></a>
-                </div>
+                <a href="terms.html" class="underline" data-translate="footer.sub.links.terms"></a>
+                <br>
+                <a href="privacy.html" class="underline" data-translate="footer.sub.links.privacy.policy"></a>
             </div>
         </div>
     </div>
+</footer>
 </div>
 
 <script type="text/javascript" src="js/preloader.js"></script>

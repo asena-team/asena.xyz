@@ -1,0 +1,42 @@
+.prose h1{
+    margin-top: 3rem;
+    color: var(--theme-color);
+}
+
+.prose h2{
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+.prose p{
+    font-size: 1rem;
+    margin: 1rem 0;
+    color: var(--pragraph-color);
+}
+
+.prose ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: var(--pragraph-color);
+}
+
+.prose li{
+    margin: 1rem 0;
+}
+
+.prose a{
+    color: #fff;
+    text-decoration: underline;
+    transition: color 500ms;
+}
+
+.prose a:hover{
+    color: var(--theme-color);
+}
+
+.prose strong{
+    font-weight: 900;
+    color: var(--title-white);
+}

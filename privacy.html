@@ -27,12 +27,11 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
 
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/sections/prose.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -43,7 +42,7 @@
             <span style="--d:0.6s;"></span>
         </div>
     </div>
-    <div class="header">
+    <header class="header">
         <div class="header_wrapper">
             <div class="link_items">
                 <div class="icon">
@@ -75,7 +74,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <div class="mobile_menu">
         <div class="top">
             <div class="brand">
@@ -105,73 +104,42 @@
     </div>
     <div class="curtain"></div>
 
-    <div class="section-wrapper pb-[36px]">
-        <div class="section flex flex-col justify-start">
-            <div class="mb-[30px] flex items-center justify-start privacy-title-box mt-[56px]">
-                <h3 class="text-[36px] font-bold text-[#d43649]">Gizlilik Politikası</h3>
-            </div>
-            <!-- 
-                <h3 class="text-[24px] text-[#eef1f5] mb-[18px] font-bold" id="title"></h3> başlık için.
-                <p class="text-[18px] font-normal text-[#c2c5c9] tracking-wide leading-loose" id="paragraph"> </p> paragraf
-                <a href="" class="text-[#eef1f5] decoration-1 underline"></a> link falan eklemen gerekirse.
+    <div class="section-wrapper">
+        <main class="section flex flex-col justify-start prose">
+            <h1>Gizlilik Politikası</h1>
+            <p>Asena kullandığınız veya bir sunucuya davet ettiğiniz anda, otomatik olarak botun gizlilik politikasını kabul etmiş olursunuz.</p>
 
-                <ul class="list-disc ml-8 text-[#c2c5c9] text-[18px]">
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                </ul>
-                ile madde madde textler atarsın. ul clasın içine list-dics yerine list-decimal 
-                yazarsan nokta nokta sıralamak yerine 1. 2. 3. şeklinde maddeleri sıralar.
+            <h2>1. Hangi veriler saklarız?</h2>
+            <p>Belirli komutlar yürütüldüğünde, çeşitli veriler daha sonra kullanılmak amacıyla saklanabilir. Kaydedilen veriler arasında şunlar olabilir:</p>
+            <ul>
+                <li>Sunucu Kimlikleri</li>
+                <li>Kullanıcı Kimlikleri</li>
+                <li>Rol Kimlikleri</li>
+                <li>Kanal Kimlikleri</li>
+                <li>Mesaj Kimlikleri</li>
+            </ul>
 
-                <br> ile bir alt satıra geçersin. 2 br atarsan 2 alt satıra geçersin.
-            -->
+            <h2>2. Bu veriler ne için saklanıyor?</h2>
+            <ul>
+                <li><strong>Sunucu Kimlikleri:</strong> Sunucu Kimlikleri, botun her sunucu için sunucu dili, çekiliş, soru ve anket ayarlarını tam olarak kaydetmesine izin vermek için kaydedilir. Bir sunucudan gelen sunucu kimliği, sunucunun bota spam göndermesi veya sunucuyu bottan yasaklamak için benzeri bir şey yapması durumunda da kaydedilebilir.</li>
+                <li><strong>Kullanıcı Kimlikleri:</strong> Kullanıcı kimlikleri kaydedilebilir, böylece bota zarar vermek isteyen kişiler bottan yasaklanabilir. Kullanıcı kimlikleri, çekilişi kimin oluşturduğunu ve kimlerin kazandığını bilebilmek, daha sonra yeniden çekme gibi aksiyonlarda kullanılabilmek üzere kaydedilebilir.</li>
+                <li><strong>Rol Kimlikleri:</strong> Eğer çekilişinizde ödül olarak rol veriyorsanız veya rol şartı koyduysanız, kullanıcının bu rollere sahip olup olmadığını belirlemek için kaydedilebilir.</li>
+                <li><strong>Mesaj Kimlikleri:</strong> Bir Çekiliş başlatıldığında Mesaj Kimlikleri kaydedilir. Botun bir çekilişin nerede olduğunu bilmesi için buna ihtiyacı var.</li>
+            </ul>
 
-            <h3 class="text-[24px] text-[#eef1f5] mb-[18px] font-bold">Lorem Ipsum </h3>
-            <p class="text-[18px] font-normal text-[#c2c5c9] tracking-wide leading-loose paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos magnam sapiente cupiditate quaerat voluptatum aspernatur placeat, delectus nobis praesentium doloribus, molestiae dolores? Ullam quae atque nulla eaque quasi tempora?
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. <a href="" class="text-[#eef1f5] decoration-1 underline">Odio</a>, optio aspernatur omnis sint hic iure quae voluptatum placeat quasi distinctio laudantium quos, labore quo nostrum ducimus repellat nemo ad? Nesciunt.
-                <br> <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quos aperiam quo est! Voluptatibus, odio inventore neque doloremque optio laudantium quam dolorum sit beatae deleniti accusamus quas autem consectetur? Error.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequatur nihil nam totam nemo, blanditiis, necessitatibus id atque, enim odit et quaerat voluptas. Vel praesentium, facilis repudiandae magnam amet porro.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sit, sint deserunt facere veritatis velit, nostrum dolore enim numquam similique odit dicta aut. Dolorem ducimus delectus, tenetur voluptatum obcaecati doloremque?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, sint eligendi similique facilis quis nesciunt ipsam unde optio consequuntur incidunt, eum pariatur consequatur deleniti. Vitae quia incidunt quasi velit pariatur?
-            </p>
-            <br> <!-- BR etiketi bir alt satıra geçmeni sağlar -->
-
-            <h3 class="text-[24px] text-[#eef1f5] mb-[18px] font-bold">Lorem Ipsum </h3>
-            <p class="text-[18px] font-normal text-[#c2c5c9] tracking-wide leading-loose paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos magnam sapiente cupiditate quaerat voluptatum aspernatur placeat, delectus nobis praesentium doloribus, molestiae dolores? Ullam quae atque nulla eaque quasi tempora?
-                <br> <br>
-
-                <ul class="list-disc ml-8 text-[#c2c5c9] text-[18px]">
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                    <li> Lorem ipsum dolor sit amet consectetur </li>
-                </ul>
-            </p>
-            <br> <!-- BR etiketi bir alt satıra geçmeni sağlar -->
-
-            
-            <h3 class="text-[24px] text-[#eef1f5] mb-[18px] font-bold">Lorem İpsum </h3>
-            <p class="text-[18px] font-normal text-[#c2c5c9] tracking-wide leading-loose paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos magnam sapiente cupiditate quaerat voluptatum aspernatur placeat, delectus nobis praesentium doloribus, molestiae dolores? Ullam quae atque nulla eaque quasi tempora?
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, optio aspernatur omnis sint hic iure quae voluptatum placeat quasi distinctio laudantium quos, labore quo nostrum ducimus repellat nemo ad? Nesciunt.
-                <br> <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quos aperiam quo est! Voluptatibus, odio inventore neque doloremque optio laudantium quam dolorum sit beatae deleniti accusamus quas autem consectetur? Error.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequatur nihil nam totam nemo, blanditiis, necessitatibus id atque, enim odit et quaerat voluptas. Vel praesentium, facilis repudiandae magnam amet porro.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.  A, sit, sint deserunt facere veritatis velit, nostrum dolore enim numquam similique odit dicta aut. Dolorem ducimus delectus, tenetur voluptatum obcaecati doloremque?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, sint eligendi similique facilis quis nesciunt ipsam unde optio consequuntur incidunt, eum pariatur consequatur deleniti. Vitae quia incidunt quasi velit pariatur?
-            </p>
-            <br> <!-- BR etiketi bir alt satıra geçmeni sağlar -->
-
-        </div>
+            <h2>3. Verilerin silinmesi</h2>
+            <p>Verileri silmek için farklı yöntemler vardır:</p>
+            <ul>
+                <li>Bir sunucunun moderatörü/yöneticisi iseniz, botu sunucudan kaldırmanız yeterlidir. Bot, bu sunucu tarafından depolanan tüm verileri veritabanından siler.</li>
+                <li>Verilerinizin silinmesi için destek ekibiyle iletişime geçebilirsiniz.</li>
+                <li>Botun sakladığı veriler sadece bot tarafından kullanılır ve başkasına aktarılamaz/satılamaz. Botun geliştiricisi verilere manuel olarak erişebilir.</li>
+                <li>Kullanıcı kimliğiniz veya bir sunucunun kimliği, botun spam veya benzeri bir nedenle sizin tarafınızdan kaydedilmişse, veri silme veya benzeri muhtemelen mümkün değildir.</li>
+            </ul>
+        </main>
     </div>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer class="footer">
         <div class="footer_wrapper">
             <div class="footer_top">
                 <div class="footer_brand">
@@ -242,7 +210,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 </div>
 
 <script type="text/javascript" src="js/preloader.js"></script>
